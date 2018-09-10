@@ -15,10 +15,10 @@ app.use(
 
 ## proxy_pass(nginx)
 ```js
-  location /weibo_api {
-      proxy_pass http://picupload.service.weibo.com;
-      rewrite ^/weibo_api/(.*) /$1 break;
-  }
+location /weibo_api {
+    proxy_pass http://picupload.service.weibo.com;
+    rewrite ^/weibo_api/(.*) /$1 break;
+}
 ```
 
 
