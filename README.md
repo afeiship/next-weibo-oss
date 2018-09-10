@@ -5,7 +5,7 @@
 ```js
 import NxWeiboOss from 'next-weibo-oss';
 
-var weiboOss = new NxWeiboOss(token);
+const weiboOss = new NxWeiboOss(token);
 
 // single file:
 weiboOss.upload(file);
