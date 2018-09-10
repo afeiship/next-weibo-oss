@@ -17,15 +17,16 @@
       },
       initToken: function () {
         var subCookie = this._token;
-        if (typeof token !== 'string') {
-          subCookie = token.find(function (item) {
+        if (typeof this._token !== 'string') {
+          subCookie = this._token.find(function (item) {
             return item.indexOf('SUB=') > -1;
           });
         }
         global.document.cookie = subCookie.split(';')[0];
       },
-      process: function (inReponse, inResolve, inReject) {
-        var _response = JSON.parse(inReponse.split('\n')[2]);
+      process: function (inResponse, inResolve, inReject) {
+        debugger
+        var _response = JSON.parse(inResponse.split('\n')[2]);
         var data = _response.data;
         if (data.count > 0) {
           var pics = NxWeiboToPics(data.pics);
@@ -36,7 +37,7 @@
           });
           inResolve(value);
         } else {
-          inReject(response);
+          inReject(inResponse);
         }
       },
       upload: function (inFile) {
@@ -52,7 +53,7 @@
         var request = {};
         var files = nx.slice(inFileList);
         files.forEach(function (file, index) {
-          request['pic' + index + 1] = file;
+          request['pic' + (index + 1)] = file;
         });
 
         return new Promise(function (resolve, reject) {
