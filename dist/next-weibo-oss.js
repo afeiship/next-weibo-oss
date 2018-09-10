@@ -25,7 +25,6 @@
         global.document.cookie = subCookie.split(';')[0];
       },
       process: function (inResponse, inResolve, inReject) {
-        debugger
         var _response = JSON.parse(inResponse.split('\n')[2]);
         var data = _response.data;
         if (data.count > 0) {
