@@ -11,7 +11,7 @@ const weiboOss = new NxWeiboOss(token);
 weiboOss.upload(file);
 
 // multiple files:
-weiboOss.upload(files);
+weiboOss.uploads(files);
 ```
 
 ## resources:
