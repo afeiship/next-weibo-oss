@@ -22,7 +22,8 @@
             return item.indexOf('SUB=') > -1;
           });
         }
-        global.document.cookie = subCookie.split(';')[0];
+        // SUB=_2A252mjcRDeRhGeBO7lAX8CzOyjSIHXVV7i_ZrDV8PUNbmtBeLVejkW9NReLbikXG3fXjOzUGTCZi9E5emuh2wIbb; Path=/;
+        global.document.cookie = subCookie;
       },
       process: function (inResponse, inResolve, inReject) {
         var _response = JSON.parse(inResponse.split('\n')[2]);
