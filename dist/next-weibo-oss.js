@@ -6,6 +6,7 @@
   var NxWeiboToPics = require('next-weibo-to-pics');
   var WEIBO_API = '/weibo_api/interface/pic_upload.php';
   var WEIBO_IMG = 'https://ws2.sinaimg.cn';
+  var ROOT_COOKIE = '; Path=/;';
 
 
   var NxWeiboOss = nx.declare('nx.WeiboOss', {
@@ -23,7 +24,7 @@
           });
         }
         // SUB=_2A252mjcRDeRhGeBO7lAX8CzOyjSIHXVV7i_ZrDV8PUNbmtBeLVejkW9NReLbikXG3fXjOzUGTCZi9E5emuh2wIbb; Path=/;
-        global.document.cookie = subCookie;
+        global.document.cookie = subCookie.split(';')[0] + ROOT_COOKIE;
       },
       process: function (inResponse, inResolve, inReject) {
         var _response = JSON.parse(inResponse.split('\n')[2]);
