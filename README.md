@@ -1,5 +1,10 @@
 # next-weibo-oss
-> Weibo oss for next api
+> Weibo oss for next api.
+
+## installation
+```bash
+npm install -S @feizheng/next-weibo-oss
+```
 
 ## proxy_pass(node)
 ```js
@@ -21,10 +26,16 @@ location /weibo_api {
 }
 ```
 
+## apis
+| api     | params   | description    |
+| ------- | -------- | -------------- |
+| upload  | file     | Upload a file. |
+| uploads | fileList | Upload files.  |
 
-## usage:
+
+## usage
 ```js
-import NxWeiboOss from 'next-weibo-oss';
+import NxWeiboOss from '@feizheng/next-weibo-oss';
 
 const weiboOss = new NxWeiboOss(token);
 
@@ -34,8 +45,3 @@ weiboOss.upload(file);
 // multiple files:
 weiboOss.uploads(files);
 ```
-
-## resources:
-
-## todos:
-- [ ] unit test case
