@@ -11,7 +11,7 @@ npm install -S @feizheng/next-weibo-oss
 app.use(
   '/weibo_api',
   proxy({
-    target: 'http://picupload.service.weibo.com',
+    target: 'https://picupload.weibo.com',
     changeOrigin: true,
     pathRewrite: { '^/weibo_api/': '/' }
   })
@@ -21,7 +21,7 @@ app.use(
 ## proxy_pass(nginx)
 ```js
 location /weibo_api {
-    proxy_pass http://picupload.service.weibo.com;
+    proxy_pass https://picupload.weibo.com;
     rewrite ^/weibo_api/(.*) /$1 break;
 }
 ```

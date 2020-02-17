@@ -2,8 +2,8 @@
  * name: @feizheng/next-weibo-oss
  * description: Weibo oss for next api.
  * url: https://github.com/afeiship/next-weibo-oss
- * version: 1.0.2
- * date: 2020-02-17 20:17:49
+ * version: 1.1.0
+ * date: 2020-02-17 20:59:58
  * license: MIT
  */
 
@@ -13,7 +13,7 @@
   var nxFileUpload = require('@feizheng/next-file-upload');
   var NxWeiboToPics = require('@feizheng/next-weibo-to-pics');
   var WEIBO_API = '/weibo_api/interface/pic_upload.php';
-  var WEIBO_IMG = 'https://ws2.sinaimg.cn';
+  var WEIBO_IMG = 'https://tva1.sinaimg.cn';
   var ROOT_COOKIE = '; Path=/;';
 
   var NxWeiboOss = nx.declare('nx.WeiboOss', {
