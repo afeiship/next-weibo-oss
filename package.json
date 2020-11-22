@@ -38,5 +38,11 @@
   "dependencies": {
     "@jswork/next-file-upload": "^1.0.0",
     "@jswork/next-weibo-to-pics": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "weibo",
+    "oss",
+    "upload"
+  ]
 }
