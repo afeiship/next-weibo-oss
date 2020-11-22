@@ -3,7 +3,7 @@
  * description: Weibo oss for next api.
  * homepage: https://github.com/afeiship/next-weibo-oss
  * version: 1.0.0
- * date: 2020-11-22 16:47:29
+ * date: 2020-11-22 16:48:15
  * license: MIT
  */
 
