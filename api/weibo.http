@@ -1,0 +1,5 @@
+POST https://picupload.weibo.com/interface/pic_upload.php
+Cookie: SUB=_2A95NrxSyDeRxGeVI7VMZ8yzEyz-IHXVs_S96rDV6PUJbkdAKLVT2kWpNTBpP0TJrn2XWNfpp5n8g-sc-xgGi3UTX
+Content-Type: multipart/form-data
+
+pic1=xxx
