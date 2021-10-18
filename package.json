@@ -10,6 +10,7 @@
   "scripts": {
     "build": "gulp",
     "test": "jest",
+    "serve": "node express.js",
     "release": "release-it"
   },
   "main": "dist/index.js",
@@ -18,6 +19,8 @@
     "@jswork/gulp-pkg-header": "^1.0.2",
     "@jswork/next": "^1.0.2",
     "del": "^6.0.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
@@ -26,6 +29,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "http-proxy-middleware": "^2.0.1",
     "jest": "^26.6.3",
     "release-it": "^14.2.1",
     "uglify-js": "3.11.6",
@@ -36,7 +40,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@jswork/next-file-upload": "^1.0.0",
+    "@jswork/next-file-upload": "^1.0.2",
     "@jswork/next-weibo-to-pics": "^1.0.0"
   },
   "keywords": [

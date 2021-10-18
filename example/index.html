@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/@jswork/next/dist/index.js"></script>
+  <script src="/@jswork/next-file-upload/dist/index.js"></script>
+  <script src="/@jswork/next-weibo-to-pics/dist/index.js"></script>
+  <script src="/index.js"></script>
+  <title>Test</title>
+</head>
+
+<body>
+  <input type="file" name="" id="f1">
+  <script>
+    var file1 = document.getElementById("f1");
+    var ossClient = new nx.WeiboOss('_2A95Mb69_DeRxGeVI7VMZ8yzEyz-IHXVtPKW3rDV6PUJbkdAKLVT2kWpNTBpP0USVcvzORyzRswCO_Rlo_IjuWR6-');
+    file1.onchange = function (e) {
+      var file = e.target.files[0];
+      ossClient.upload(file).then(res => {
+        console.log('res', res);
+      })
+    }
+  </script>
+</body>
+
+</html>
