@@ -2,8 +2,8 @@
  * name: @jswork/next-weibo-oss
  * description: Weibo oss for next api.
  * homepage: https://github.com/afeiship/next-weibo-oss
- * version: 1.0.1
- * date: 2021-10-19 09:21:54
+ * version: 1.0.2
+ * date: 2021-10-19 09:22:52
  * license: MIT
  */
 
