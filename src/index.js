@@ -8,13 +8,16 @@
 
   var NxWeiboOss = nx.declare('nx.WeiboOss', {
     methods: {
-      init: function (inToken) {
+      init: function (inToken, inWeiboOptions) {
         global.document.cookie = 'SUB=' + inToken + ROOT_COOKIE;
+        this.weiboOptions = inWeiboOptions;
       },
       process: function (inResponse, inResolve, inReject) {
         var _response = JSON.parse(inResponse.split('\n')[2]);
         var data = _response.data;
-        data.count > 0 ? inResolve(nxWeiboToPics(inResponse)) : inReject(inResponse);
+        data.count > 0
+          ? inResolve(nxWeiboToPics(inResponse, this.weiboOptions))
+          : inReject(inResponse);
       },
       upload: function (inFile) {
         var self = this;
