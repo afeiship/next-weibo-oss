@@ -40,9 +40,9 @@ location /weibo_api {
 
 ## usage
 ```js
-import NxWeiboOss from '@jswork/next-weibo-oss';
+import '@jswork/next-weibo-oss';
 
-const weiboOss = new NxWeiboOss(token);
+const weiboOss = new nx.WeiboOss(token);
 
 // single file:
 weiboOss.upload(file);
