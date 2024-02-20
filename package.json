@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-weibo-oss",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Weibo oss for next api.",
   "homepage": "https://js.work",
   "author": {
@@ -34,7 +34,11 @@
     "uglify-save-license": "^0.4.1"
   },
   "babel": {
-    "presets": [["@babel/preset-env"]]
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
   },
   "publishConfig": {
     "access": "public",
@@ -43,5 +47,11 @@
   "dependencies": {
     "@jswork/next-file-upload": "^1.0.3",
     "@jswork/next-weibo-to-pics": "^1.1.2"
-  }
+  },
+  "keywords": [
+    "next",
+    "weibo",
+    "oss",
+    "upload"
+  ]
 }
