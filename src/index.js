@@ -28,13 +28,14 @@ const NxWeiboOss = nx.declare('nx.WeiboOss', {
     uploads: function (inFileList) {
       const request = {};
       const files = nx.slice(inFileList);
+      const self = this;
       files.forEach(function (file, index) {
         request['pic' + (index + 1)] = file;
       });
 
       return new Promise(function (resolve, reject) {
         nx.fileUpload(WEIBO_API, request).then((response) => {
-          this.process(response, resolve, reject);
+          self.process(response, resolve, reject);
         });
       });
     }
