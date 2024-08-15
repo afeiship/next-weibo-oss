@@ -19,9 +19,10 @@ const NxWeiboOss = nx.declare('nx.WeiboOss', {
         : inReject(inResponse);
     },
     upload: function (inFile) {
+      const self = this;
       return new Promise(function (resolve, reject) {
         nx.fileUpload(WEIBO_API, { pic1: inFile }).then((response) => {
-          this.process(response, resolve, reject);
+          self.process(response, resolve, reject);
         });
       });
     },
