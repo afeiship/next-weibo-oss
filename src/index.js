@@ -43,8 +43,8 @@ const NxWeiboOss = nx.declare('nx.WeiboOss', {
   }
 });
 
-if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {
-  module.exports = NxWeiboOss;
-}
+// if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {
+//   module.exports = NxWeiboOss;
+// }
 
 export default NxWeiboOss;
